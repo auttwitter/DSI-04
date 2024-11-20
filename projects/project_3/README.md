@@ -13,7 +13,7 @@ The goal of **NLP Classification**: Subreddit Pepsi vs Coca-Cola** is to leverag
 
 **Vectorization**: Converting the tokenized text into numerical representations that machine learning algorithms can process. Techniques like `CountVectorizer` and `TF-IDF Vectorizer` are used to transform text into vectors based on word frequency or importance.
 
-**Classification**: Applying machine learning classifiers to predict the category (Pepsi or Coca-Cola) of the text. This involves training models using algorithms such as `Naive Bayes`, `Logistic Regression`, or more complex models like `Random Forest` or `XGBoost`.
+**Classification**: Applying machine learning classifiers to predict the category (Pepsi or Coca-Cola) of the text. This involves training models using algorithms such as `Naive Bayes` or more complex models like `Gradient Boosting` or `XGBoost`.
 
 ---
 
@@ -63,3 +63,11 @@ On the other hand, a tokenizer is a technique used to break down text into small
 ![Common Word](images/tokenizer_performance.png)
 
 Notably, Naive Bayes is the only model that is affected by n-gram_range and min_df. Using bigrams and setting min_df = 2 yields higher accuracy.
+
+### Model Tuning
+
+The goal of the model is to predict outcomes effectively, and to achieve this, we selected the model with the highest testing F1 score. The chosen model is Gradient Boosting, which achieved a 75% F1 score, with an accuracy of 81% on the training set and 70% on the testing set. The parameters for this model are as follows: it uses a CountVectorizer for feature extraction, with tokenization performed by lowering the text and removing English stopwords. Additionally, the vectorizer is configured to extract unigrams and bigrams, with a maximum of 3000 features, a min_df value of 3, and a max_df value of 0.9.
+
+Note that the Gradient Boosting Classifier is an algorithm that builds an ensemble of weak learners, specifically decision trees, to improve prediction accuracy. It works iteratively, with each subsequent tree correcting the errors made by the previous ones.
+
+We tune this model by adjusting the learning rate, the number of trees, the subsample used for each tree, the minimum samples required to make a split, the minimum samples required for a leaf node, the maximum depth of each tree, and the maximum number of features considered. Unfortunately, it appears that the default settings performed the best.
