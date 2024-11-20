@@ -1,7 +1,7 @@
 ## ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 3: NLP Classification: Subreddit Pepsi vs Coca-Cola | README
 
 
-**README** | [Part 1: EDA](code/01_EDA.ipynb) | [Part 2: Vectorizer](code/02_Vectorizer.ipynb) | [Part 3: zzz](code/03_Interpretation.ipynb)
+**README** | [Part 1: EDA](code/01_EDA.ipynb) | [Part 2: Vectorizer](code/02_Vectorizer.ipynb) | [Part 3: Vectorizer Performance](code/03_Vectorizer_Peformance.ipynb)
 
 ---
 
@@ -52,3 +52,14 @@ Thus, we summarize the findings with a word cloud showing the dominance of exclu
 
 ![Word Cloud](images/pepsi_vs_coca_cola_exclusive_word_cloud.png)
 
+### Vectorizer & Tokenizer Performance
+
+A vectorizer is a method used to convert text data into numerical representations, enabling machine learning models to process and analyze the data effectively. We compared the effects of two vectorizers, CountVectorizer and TfidfVectorizer. As shown in the graphs below, TfidfVectorizer outperforms CountVectorizer across all four models in terms of training accuracy and performs similarly in testing accuracy..
+
+![Common Word](images/vectorizer_performance.png)
+
+On the other hand, a tokenizer is a technique used to break down text into smaller components, such as words or phrases, to prepare it for analysis. We compared the effects of different tokenization strategies, including lemmatization, stemming, and simple lowercasing, combined with either retaining or removing stopwords. From the charts, stemming performs well with AdaBoost, while retaining stopwords yields better training accuracy, particularly for XGBoost. However, removing stopwords results in better performance on the testing set.
+
+![Common Word](images/tokenizer_performance.png)
+
+Notably, Naive Bayes is the only model that is affected by n-gram_range and min_df. Using bigrams and setting min_df = 2 yields higher accuracy.
