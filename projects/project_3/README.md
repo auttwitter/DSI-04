@@ -7,7 +7,7 @@
 
 ### Introduction
 
-The goal of **NLP Classification**: Subreddit Pepsi vs Coca-Cola** is to leverage natural language processing (NLP) techniques for classifying text data based on subreddit discussions about **Pepsi** and **Coca-Cola**. To accomplish this, several key NLP concepts need to be applied:
+The goal of **NLP Classification**: Subreddit **Pepsi** vs **Coca-Cola** is to leverage natural language processing (NLP) techniques for classifying text data based on subreddit discussions about **Pepsi** and **Coca-Cola**. To accomplish this, several key NLP concepts need to be applied:
 
 **Tokenization**: Breaking down the text into smaller units (tokens) such as words, phrases, or characters. This process helps in understanding the structure and content of the text.
 
