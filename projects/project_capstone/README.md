@@ -2,7 +2,7 @@
 
 ## Project Capstone
 
-### Reducing Electricity Costs in Romania: Predictive annd Reinforcement Learning for Solar Power Optimization
+### Reducing Electricity Costs in Romania: Predictive and Reinforcement Learning for Solar Power Optimization
 
 ---
 
