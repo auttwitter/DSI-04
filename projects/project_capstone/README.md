@@ -16,6 +16,8 @@
 - All three datasets cover the period from January 2024 to March 2024 on hourly basis. The data for March 31, 2024 was intentionally removed due to missing one hour because of daylight saving adjustments.
 - Finally, all three datasets were cleaned and merged into a single file, [electricity_romania.csv]('../data/electricity_romania.csv'). The data dictionary is provided below.
 
+<div align="center">
+
 | Column Name          | Description                                                      | Data Type       |
 |----------------------|------------------------------------------------------------------|-----------------|
 | `datetime`           | Date and time of the record                                      | `datetime64[ns]`|
@@ -36,13 +38,15 @@
 | `icon_partly_cloudy` | Icon representing partly cloudy weather (binary: 0 = no, 1 = yes)| `float64`       |
 | `icon_rain`          | Icon representing rain weather (binary: 0 = no, 1 = yes)         | `float64`       |
 | `icon_snow`          | Icon representing snow weather (binary: 0 = no, 1 = yes)         | `float64`       |
-| `ckwh`               | Electricity cost per hour in Romania                             | `float64`       |
+| `ckwh`               | Electricity cost (cent of euro) per hour in Romania                             | `float64`       |
 | `consumption`        | Electricity consumption per hour                                 | `int64`         |
 | `production`         | Electricity production per hour                                  | `int64`         |
-| `nuclear`            | Nuclear energy production per hour                               | `int64`         |
-| `wind`               | Wind energy production per hour                                  | `int64`         |
-| `hydroelectric`      | Hydroelectric energy production per hour                         | `int64`         |
-| `oil_gas`            | Oil and gas energy production per hour                           | `int64`         |
-| `coal`               | Coal energy production per hour                                  | `int64`         |
-| `solar`              | Solar energy production per hour                                 | `int64`         |
-| `biomass`            | Biomass energy production per hour                               | `int64`         |
+| `nuclear`            | Nuclear energy production (MWs) per hour                               | `int64`         |
+| `wind`               | Wind energy production (MWs) per hour                                  | `int64`         |
+| `hydroelectric`      | Hydroelectric energy production (MWs) per hour                         | `int64`         |
+| `oil_gas`            | Oil and gas energy production (MWs) per hour                           | `int64`         |
+| `coal`               | Coal energy production (MWs) per hour                                  | `int64`         |
+| `solar`              | Solar energy production (MWs) per hour                                 | `int64`         |
+| `biomass`            | Biomass energy production (MWs) per hour                               | `int64`         |
+
+</div>
