@@ -6,7 +6,7 @@
 
 ---
 
-**README** | [Part 1: Cleaning](01_Cleaning.ipynb) | [Part 2: EDA](02_EDA.ipynb)
+**README** | [Part 1: Cleaning](01_Cleaning.ipynb) | [Part 2: EDA](02_EDA.ipynb) | [Part 3: Solar Energy Prediction Models](03_Model_Solar_Energy.ipynb)
 
 ---
 
@@ -90,5 +90,12 @@
 
 ![ec_var](./image/ec_var.png)
 
+### Solar Energy Prediction Models
+- Three algorithms were implemented: ordinary linear regression, random forest regressor, and the best performer, gradient boost.
+- After tuning, the improved gradient boost model achieved an R-squared of 1.00 on the training set and 0.90 on the testing set.
+- The top three weather-related features influencing the model are `cloudcover`, `humidity`, and `has_solarradiation`.
 
 
+![gb_importances](./image/gb_importances.png)
+
+In fact, the ordinary linear regression model constructed has a balanced R-squared with no overfitting, achieving 0.72 on the training set and 0.69 on the testing set. However, the scores can be improved using another model, even if it introduces a slight defree of overfitting.
