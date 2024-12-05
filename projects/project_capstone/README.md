@@ -6,7 +6,7 @@
 
 ---
 
-**README** | [Part 1: Cleaning](01_Cleaning.ipynb) | [Part 2: EDA](02_EDA.ipynb) | [Part 3: Solar Energy Prediction Models](03_Model_Solar_Energy.ipynb)
+**README** | [Part 1: Cleaning](code/01_Cleaning.ipynb) | [Part 2: EDA](code/02_EDA.ipynb) | [Part 3: Solar Energy Prediction Models](code/03_Model_Solar_Energy.ipynb)
 
 ---
 
