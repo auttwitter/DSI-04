@@ -91,7 +91,7 @@
 ![ec_var](./image/ec_var.png)
 
 ### Solar Energy Prediction Models
-- Three algorithms were implemented: ordinary linear regression, random forest regressor, and the best performer, gradient boosting.
+- Three algorithms were implemented: ordinary linear regression, random forest regressor, and the best performer, **gradient boosting**.
 - After tuning, the improved gradient boost model achieved an R-squared of 1.00 on the training set and 0.90 on the testing set.
 - The top three weather-related features influencing the model are `cloudcover`, `humidity`, and `has_solarradiation`.
 
@@ -104,9 +104,18 @@ In fact, the ordinary linear regression model constructed has a balanced R-squar
 - Five algorithms were implemented: ordinary linear regression, random forest regressor, gradient boosting, adaptive boosting, and the best performer, extreme gradient boosting.
 - Ordinary linear regression and adaptive boosting showed no sign of overfitting, with R-squared values on the testing set ranging from 0.61 to 0.69.
 - On the other hand, random forest regressor, gradient boosting, and extreme gradient boosting achieved R-squared values close to 1.00 on the training set but around 0.80 on the testing set, indicating some overfitting.
-- Extreme gradient boosting underwent hyperparameter tuning, achieving an R-squared of 1.00 on the training set and 0.83 on the testing set.
+- **Extreme gradient boosting** underwent hyperparameter tuning, achieving an R-squared of 1.00 on the training set and 0.83 on the testing set.
 - The top three energy-related features influencing the model are `consumption`, `oil_gas`, and `solar`. 
 
 ![gb_importances](./image/gb_importances2.png)
 
 In practice, to forecast the hourly electricity cost for tomorrow, the energy production for each hour of tomorrow must first be known. However, this is often difficult to obtain due to the variablity of energy sources, such as fluctuating renewable energy production and unpredictable demand patterns. This makes time series analysis an essential approach.
+
+The time series analysis was conducted using **SARIMAX**. 
+The ADF test showed stationarity of the data, and both the ACF and PACF confirmed a seasonality of 24-hour period.
+After applying a log transform on the hourly electricity cost, the model achieved a root mean squared error of 2.22 cents per kilowatt,
+calculated as the difference between the actual and forecasted values over the last 168 hours of data.
+![electricity_cost_ts](./image/electricity_cost_ts.png)
+
+However, the R-squared of the time series model is 0.54, which is significantly lower than that of the XGBoost model, which stands at 0.83.
+This discrepancy arises because the time series model lacks complexity, as it does not incorporate many features.
