@@ -162,6 +162,7 @@ $$
       - Uniform: Energy usage is evenly distributed across all hours of the day.
       - Peak-hour usage: Energy usage is higher during peak hours, reflecting typical household consumption patterns.
       - Non-peak hour usage: Energy usage varies unpredictably and does not follow a consistent pattern.
+![load_profile](./image/load_profile.png)
 - **Agent**
   - The agent interacts with the environment by making decisions to **Charge** or **Discharge** the solar battery.
   - The immediate reward for the agent is based on the electricity cost calculated according to its action.
