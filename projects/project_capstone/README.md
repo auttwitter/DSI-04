@@ -157,11 +157,12 @@ $$
 #### Fundamental Concept
 - **Environment**
     - The electricity cost by hour is the median of the costs for each hour.
-    - The solar energy collected by a household is calculated from the proportion of the median solar production (on a country scale) to the household scale.
+    - The solar energy collected by a household is calculated from the proportion of the median solar production (on a country scale) to the household scale, which totals 5.8 kWh.
     - The hourly load (hourly demand) is calculated based on the average usage per household, assumed to be 13 kWh per day. This demand is distributed according to three patterns: 1. Uniform, 2. Peak-hour usage, and 3. Non-peak hour usage.
       - Uniform: Energy usage is evenly distributed across all hours of the day.
       - Peak-hour usage: Energy usage is higher during peak hours, reflecting typical household consumption patterns.
       - Non-peak hour usage: Energy usage varies unpredictably and does not follow a consistent pattern.
+
 ![load_profile](./image/load_profile.png)
 - **Agent**
   - The agent interacts with the environment by making decisions to **Charge** or **Discharge** the solar battery.
@@ -169,6 +170,7 @@ $$
 - **State**
   - A state represents the current situation or condition of the agent within the environment.
   - The state is defined by the hour of the day and the battery level. To ensure the number of states is finite, the battery level is rounded down and up into discrete intervals, rather than using a float number.
+  - In this study, the initial battery level is set to 3.
 
  #### Action System
 - The epsilon greedy function is applied.
@@ -192,4 +194,4 @@ $$
 - Continue this process until the Q-table converges, i.e., when the values update within a non-significant threshold over time.
 
 #### Results
-- In progress
+![final_result](./image/final_result.png)
