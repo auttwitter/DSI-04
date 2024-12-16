@@ -19,7 +19,7 @@ Additionally, a time series model will be constructed to independently forecast 
 Furthermore, an optimization model using reinforcement learning will be designed to minimize electricity costs, considering the predicted solar power availability and electricity prices for each hour.
 
 
-### Datasources and Data Dictionary
+### Data Sources and Data Dictionary
 - The data was extracted from 3 sources:
   - Weather in Bucharest, Romania: **[Visual Crossing's weather data services](https://www.visualcrossing.com/weather/weather-data-services/Bucharest,Romania/metric/)**
   - Electricity Cost per Hour: **[Thingler](https://thingler.io/country/Romania)**, by interpreting the bar charts and making personal notes
@@ -87,15 +87,15 @@ Furthermore, an optimization model using reinforcement learning will be designed
 
 #### Relationship between Electricity Production and Electricity Cost per Hour
 - Electricity cost fluctuate based on peak hours (9-11 AM, 5-7 PM) and off-peak hours.
-- Electricity costs are positively related to energy consumption, energy production, annd the production of hydroelectric, oil and gas, and coal. However, when there is excess production, electricity costs decrease, showing a negative relationship.
+- Electricity costs are positively related to energy consumption, energy production, and the production of hydroelectric, oil and gas, and coal. However, when there is excess production, electricity costs decrease, showing a negative relationship.
 - Note that, production encompasses the total output from all energy sources, effectively representinng the overall energy generatioin. Therefore, it's unnecessary to consider the contributions from individual energy sources separately.
 
 ![ec_var](./image/ec_var.png)
 
 ### Solar Energy Prediction Models
 - Three algorithms were implemented: ordinary linear regression, random forest regressor, and the best performer, **gradient boosting**.
-- After tuning, the improved gradient boost model achieved an R-squared of 1.00 on the training set and 0.90 on the testing set.
-- The top three weather-related features influencing the model are `cloudcover`, `humidity`, and `has_solarradiation`.
+- After tuning, the improved gradient boosting model achieved an R-squared of 1.00 on the training set and 0.90 on the testing set.
+- The top three weather-related features influencing the model are `humidity`, `cloudcover` , and `has_solarradiation`.
 
 
 ![gb_importances](./image/gb_importances.png)
