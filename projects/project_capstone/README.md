@@ -194,4 +194,25 @@ $$
 - Continue this process until the Q-table converges, i.e., when the values update within a non-significant threshold over time.
 
 #### Results
+- **Agent Decision**
+    - In the first 100 episodes, the agent selects random choices to charge and discharge, resulting in values on the graph that are nearly 0.5.
+    - In the last 100 episodes, the agent has learned when to charge and discharge, resulting in values on the graph that are nearly 0 or 1.
+    - **Unifrom Users**
+      - Charging: Primarily during mid-day when solar energy production peaks.
+      - Discharging: Early morning and late evening when solar energy is unavailable.
+      - The electricity cost in the first 100 episodes is 59.64 cents, while in the last 100 episodes it is 37.72 cents, reflecting a reduction of 37%.
+      - The minimum electricity cost achieved by the agent is 35.46 cents.
+    - **Peak Hour Users**
+      - Charging: During mid-day solar peaks, similar to Uniform Users.
+      - Discharging: Mostly during peak hours (morning and evening).
+      -  The electricity cost in the first 100 episodes is 61.14 cents, while in the last 100 episodes it is 38.25 cents, reflecting a reduction of 37%.
+      -  The minimum electricity cost achieved by the agent is 34.13 cents.
+    - **Non Peak Hour Users**
+      - Charging: Mid-day when solar energy is highest.
+      - Discharging: Varies throughout the day based on immediate load requirement
+      -  The electricity cost in the first 100 episodes is 58.05 cents, while in the last 100 episodes it is 40.55 cents, reflecting a reduction of 30%.
+      -  The minimum electricity cost achieved by the agent is 37.32 cents.
+- **Overall Insights**
+    - Learning Adaptability: The agent showcases the ability to learn and adapt its strategies to different user profiles, optimizing energy usage and cost savings accordingly.
+    - Efficiency Gains: Each user type benefits from the agent's tailored approach, achieving substantial electricity cost reductions through strategic energy management.
 ![final_result](./image/final_result.png)
