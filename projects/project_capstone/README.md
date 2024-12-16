@@ -6,7 +6,7 @@
 
 ---
 
-**README** | [Part 1: Cleaning](code/01_Cleaning.ipynb) | [Part 2: EDA](code/02_EDA.ipynb) | [Part 3: Solar Energy Prediction Models](code/03_Model_Solar_Energy.ipynb) | [Part 4: Electricity Cost Prediction Models](code/04_Model_Electricity_Cost.ipynb) |  [Part 5: Electricity Cost Prediction Using Time Series Models](code/05_Model_Electricity_Cost_ts.ipynb) [Part 6: Solar Battery Optimization](code/06_Reinforcement_Learning.ipynb)
+**README** | [Part 1: Cleaning](code/01_Cleaning.ipynb) | [Part 2: EDA](code/02_EDA.ipynb) | [Part 3: Solar Energy Prediction Models](code/03_Model_Solar_Energy.ipynb) | [Part 4: Electricity Cost Prediction Models](code/04_Model_Electricity_Cost.ipynb) |  [Part 5: Electricity Cost Prediction Using Time Series Models](code/05_Model_Electricity_Cost_ts.ipynb) | [Part 6: Solar Battery Optimization](code/06_Reinforcement_Learning.ipynb)
 
 ---
 
