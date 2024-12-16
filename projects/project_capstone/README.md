@@ -194,6 +194,9 @@ $$
 - Continue this process until the Q-table converges, i.e., when the values update within a non-significant threshold over time.
 
 #### Results
+
+![final_result](./image/final_result.png)
+
 - **Agent Decision**
     - In the first 100 episodes, the agent selects random choices to charge and discharge, resulting in values on the graph that are nearly 0.5.
     - In the last 100 episodes, the agent has learned when to charge and discharge, resulting in values on the graph that are nearly 0 or 1.
@@ -215,4 +218,3 @@ $$
 - **Overall Insights**
     - Learning Adaptability: The agent showcases the ability to learn and adapt its strategies to different user profiles, optimizing energy usage and cost savings accordingly.
     - Efficiency Gains: Each user type benefits from the agent's tailored approach, achieving substantial electricity cost reductions through strategic energy management.
-![final_result](./image/final_result.png)
